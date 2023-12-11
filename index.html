@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawesome Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Pawesome Blog</h1>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="petservices.html">Pet Services</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </header>
+
+    <main id="content" class="container">
+        <section class="content-section" id="home">
+            <h2>Welcome to Pawesome Blog!</h2>
+            <p>Explore the latest articles on pet care, training tips, and heartwarming stories about our furry friends.</p>
+            <p>Stay tuned for exciting updates and valuable insights into the world of pets.</p>
+
+            <img src="Bowtie.jpg" alt="Cute Dog" class="dog-image">
+
+            <!-- Display content from dogs.xml -->
+            <div id="dogsContent"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Pawesome Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Function to load JSON data
+            function loadJSON() {
+                $.ajax({
+                    type: "GET",
+                    url: "dogs.json",
+                    dataType: "json",
+                    success: function (dogs) {
+                        var dogsContent = "";
+                        dogs.forEach(function (dog) {
+                            // Create HTML content for each dog
+                            dogsContent += `<div class="dog-info">
+                                                <h3>${dog.name}</h3>
+                                                <p>Breed: ${dog.breed}</p>
+                                                <p>Age: ${dog.age}</p>
+                                                <p>Color: ${dog.color}</p>
+                                            </div>`;
+                        });
+
+                        // Append the content to the 'dogsContent' div
+                        $('#dogsContent').html(dogsContent);
+                    }
+                });
+            }
+
+            // Load JSON data
+            loadJSON();
+        });
+    </script>
+</body>
+
+</html>

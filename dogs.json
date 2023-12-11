@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Buddy",
+        "breed": "Golden Retriever",
+        "age": 3,
+        "color": "Golden"
+    },
+    {
+        "name": "Luna",
+        "breed": "Labrador",
+        "age": 2,
+        "color": "Black"
+    },
+    {
+        "name": "Rusty",
+        "breed": "Dachshund",
+        "age": 4,
+        "color": "Brown"
+    },
+    {
+        "name": "Charlie",
+        "breed": "Beagle",
+        "age": 1,
+        "color": "Tricolor"
+    },
+    {
+        "name": "Bella",
+        "breed": "Poodle",
+        "age": 5,
+        "color": "White"
+    },
+    {
+        "name": "Riley",
+        "breed": "Boxer",
+        "age": 2,
+        "color": "Fawn"
+    },
+    {
+        "name": "Milo",
+        "breed": "Shih Tzu",
+        "age": 3,
+        "color": "White and Brown"
+    },
+    {
+        "name": "Sadie",
+        "breed": "Siberian Husky",
+        "age": 4,
+        "color": "Gray and White"
+    },
+    {
+        "name": "Oscar",
+        "breed": "Chihuahua",
+        "age": 1,
+        "color": "Brown"
+    },
+    {
+        "name": "Zoe",
+        "breed": "German Shepherd",
+        "age": 2,
+        "color": "Black and Tan"
+    }
+]
